@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#104c38">
+<meta name="description" content="Spotlight Cleaning Services in Lagos. Cleaning for homes, offices, upholstery and post-construction spaces. Request a quote on WhatsApp.">
+<title>Spotlight Cleaning Services | Lagos</title>
+<style>
+:root{--green:#145b43;--dark:#0b3023;--mint:#eaf6ef;--ink:#17231d;--muted:#59685f;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+.topbar{background:var(--dark);color:#fff;padding:8px 0;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #dce9e0}
+.nav{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-size:17px;font-weight:800;color:var(--green);line-height:1.3;display:flex;align-items:center;gap:10px}
+.logo{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:var(--green);color:white;font-size:23px}
+.links{display:flex;align-items:center;gap:19px;font-weight:700;font-size:14px}
+.links a:hover{color:var(--green)}
+.menu{display:none;background:#fff;border:1px solid #dce9e0;border-radius:8px;padding:5px 12px;font-size:24px;color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:white;padding:12px 19px;border-radius:9px;border:1px solid var(--green);font-weight:800;cursor:pointer}
+.btn:hover{background:var(--dark)}
+.btn-outline{background:transparent;color:#fff;border-color:#fff}
+.hero{min-height:620px;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(120deg,#09291d,#145b43 65%,#3e8062);color:white}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 85% 25%,rgba(255,255,255,.14),transparent 40%),linear-gradient(90deg,rgba(3,24,16,.6),transparent)}
+.hero-content{position:relative;max-width:760px;padding:90px 0}
+.eyebrow,.kicker{font-size:13px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#aee5c3}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.05;letter-spacing:-2px;margin:18px 0}
+h1 span{color:#bdebd0}
+.hero p{font-size:19px;line-height:1.8;color:#edf7f0;max-width:680px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.trust{display:flex;gap:12px 22px;flex-wrap:wrap;margin-top:25px;font-size:14px}
+.trust span:before{content:"✓ ";color:#bdebd0;font-weight:bold}
+section{padding:76px 0}
+.pale{background:#f4faf6}
+.heading{text-align:center;max-width:760px;margin:0 auto 38px}
+.kicker{color:var(--green)}
+h2{font-size:clamp(32px,4vw,46px);line-height:1.2;letter-spacing:-1px;color:var(--dark);margin:12px 0 16px}
+.heading p,.about p,.quote-copy p{color:var(--muted);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{background:white;border:1px solid #dce9e0;border-radius:15px;padding:25px}
+.icon{width:48px;height:48px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-size:25px;color:var(--green)}
+.service h3{color:var(--dark);font-size:21px;line-height:1.35;margin:16px 0 8px}
+.service p{color:var(--muted);margin:0;font-size:16px}
+.service a{display:inline-block;color:var(--green);font-weight:800;margin-top:15px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.about-art{min-height:340px;border-radius:22px;background:linear-gradient(145deg,#d9f0e1,#f5fbf7);display:flex;align-items:end;padding:25px}
+.about-card{background:white;padding:23px;border-radius:15px;box-shadow:0 10px 30px #12352212}
+.about-card strong{color:var(--green);font-size:22px}
+.checks{list-style:none;padding:0;display:grid;gap:12px}
+.checks li:before{content:"✓";color:var(--green);font-weight:bold;margin-right:10px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.step{border-top:3px solid #b8d9c3;padding-top:18px}
+.step strong{color:var(--green);font-size:13px;letter-spacing:1px}
+.step h3{color:var(--dark);font-size:21px}
+.step p{color:var(--muted)}
+.cta{background:var(--dark);color:white;padding:42px 0}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:22px}
+.cta h2{color:white;margin:0 0 8px;font-size:clamp(28px,4vw,40px)}
+.cta p{margin:0;color:#d6e9dd}
+.quote-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
+.contact-list{display:grid;gap:17px;margin-top:25px;color:var(--muted);overflow-wrap:anywhere}
+.contact-list strong{display:block;color:var(--dark)}
+.form-box{padding:26px;background:white;border:1px solid #dce9e0;border-radius:17px;box-shadow:0 12px 35px #1235220b}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:7px;min-width:0}
+.field.full{grid-column:1/-1}
+.field label{font-size:15px;font-weight:800;color:var(--dark)}
+.field input,.field select,.field textarea{width:100%;min-width:0;padding:12px;border:1px solid #d6e3da;border-radius:8px;background:#fbfdfb;font-size:16px}
+.field textarea{min-height:110px;resize:vertical}
+.note{font-size:14px;color:var(--muted)}
+.form-box button{width:100%}
+.faq{max-width:850px;margin:auto;display:grid;gap:12px}
+details{padding:18px 20px;background:#fff;border:1px solid #dce9e0;border-radius:11px}
+summary{cursor:pointer;font-weight:800;color:var(--dark);font-size:17px}
+details p{color:var(--muted);margin-bottom:0}
+footer{background:#09291d;color:#e4f0e8;padding:40px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:25px;padding-bottom:25px}
+footer h3,footer h4{color:white}
+footer p,footer a{color:#c1d7ca}
+.footer-links{display:grid;gap:8px}
+.copyright{border-top:1px solid #ffffff2b;padding-top:17px;font-size:13px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.quick{position:fixed;right:14px;bottom:14px;z-index:25;display:flex;flex-direction:column;gap:9px}
+.quick a{color:white;padding:12px 16px;border-radius:35px;min-width:125px;text-align:center;font-weight:800;box-shadow:0 5px 18px #0003}
+.call{background:var(--dark)}
+.wa{background:#168c52}
+@media(max-width:850px){.links{gap:11px}.links .nav-call{display:none}.grid{grid-template-columns:repeat(2,1fr)}.about-grid,.quote-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
+@media(max-width:620px){
+ body{padding-bottom:62px}
+ .topbar{font-size:12px}
+ .nav{min-height:66px}
+ .brand{font-size:14px;max-width:82%}
+ .logo{width:35px;height:35px}
+ .menu{display:block}
+ .links{display:none}
+ .links.open{display:flex;position:absolute;top:66px;left:0;right:0;background:#fff;padding:20px 5%;flex-direction:column;align-items:stretch;gap:12px;box-shadow:0 10px 20px #0001}
+ .links.open a{padding:6px 0}
+ .links.open .btn{text-align:center}
+ .hero{min-height:620px}
+ .hero-content{padding:65px 0}
+ h1{font-size:clamp(39px,11vw,55px);letter-spacing:-1px}
+ .hero p{font-size:17px}
+ .buttons{flex-direction:column}
+ .buttons .btn{width:100%}
+ section{padding:56px 0}
+ .heading{text-align:left;margin-bottom:27px}
+ h2{font-size:33px}
+ .heading p,.about p,.quote-copy p{font-size:16px}
+ .grid{grid-template-columns:1fr}
+ .service{padding:22px}
+ .service p{font-size:16px;line-height:1.8}
+ .about-art{min-height:260px;padding:18px}
+ .cta-inner{flex-direction:column;align-items:stretch}
+ .cta-inner .btn{width:100%}
+ .form-box{padding:19px}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .footer-grid{grid-template-columns:1fr}
+ .copyright{flex-direction:column}
+ .quick{left:9px;right:9px;bottom:8px;flex-direction:row;justify-content:center}
+ .quick a{flex:1;min-width:0;padding:11px 8px;font-size:14px;max-width:200px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Professional Cleaning Services Across Lagos</span><span>📍 Lekki, Lagos · Listed hours: Open 24 Hours</span></div></div>
+
+<header>
+<div class="wrap nav">
+<a class="brand" href="#home"><span class="logo">✦</span><span>Spotlight Cleaning Services</span></a>
+<button class="menu" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="links" id="navLinks">
+<a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#faq">FAQs</a>
+<a class="btn nav-call" href="tel:+2348098179146">☎ Call Us</a>
+<a class="btn" href="#quote">Get a Free Quote</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="wrap"><div class="hero-content" id="heroContent">
+<div class="eyebrow">A Cleaner Space · A Healthier You</div>
+<h1>Professional Cleaning Services <span>in Lagos.</span></h1>
+<p>From standard and deep cleaning to office cleaning, fumigation, post-construction, spring and upholstery cleaning, we help homes and businesses feel fresh, clean and cared for.</p>
+<div class="buttons"><a class="btn" href="#quote">Get a Free Quote ↗</a><a class="btn btn-outline" href="tel:+2348098179146">☎ Call 0809 817 9146</a></div>
+<div class="trust"><span>Careful attention to detail</span><span>Home and office cleaning</span><span>Convenient quote requests</span></div>
+</div></div>
+</section>
+
+<section class="pale" id="services">
+<div class="wrap">
+<div class="heading"><div class="kicker">Our Services</div><h2>Cleaning for the Spaces That Matter</h2><p>Choose the service you need and tell us about your property. We can follow up to confirm the details and prepare a quote based on your cleaning requirements.</p></div>
+<div class="grid">
+<article class="service"><div class="icon">✧</div><h3>Deep Cleaning</h3><p>A detailed clean focused on built-up dust, overlooked corners, fixtures and frequently touched surfaces. Ideal for spaces needing extra attention beyond routine cleaning.</p><a href="#quote">Request a Quote ↗</a></article>
+<article class="service"><div class="icon">▦</div><h3>Office and Workplace Cleaning</h3><p>Keep offices and commercial spaces clean, presentable and comfortable for staff, clients and visitors. Ask about a suitable cleaning plan for your workplace.</p><a href="#quote">Request a Quote ↗</a></article>
+<article class="service"><div class="icon">⌂</div><h3>Standard Cleaning</h3><p>Routine cleaning for everyday rooms and surfaces to help your home or workplace feel fresh, organised and welcoming.</p><a href="#quote">Request a Quote ↗</a></article>
+<article class="service"><div class="icon">☘</div><h3>Fumigation Services</h3><p>Tell us about your fumigation needs, property type and location so the team can discuss the service you require and confirm the next steps.</p><a href="#quote">Request a Quote ↗</a></article>
+<article class="service"><div class="icon">▤</div><h3>Post-Construction Cleaning</h3><p>Cleaning support after building or renovation work to help remove dust and prepare rooms, offices and other spaces for their next use.</p><a href="#quote">Request a Quote ↗</a></article>
+<article class="service"><div class="icon">✿</div><h3>Spring Cleaning</h3><p>A thorough refresh for rooms and surfaces that need extra attention from top to bottom. Share the size of your space and what you want cleaned.</p><a href="#quote">Request a Quote ↗</a></article>
+<article class="service"><div class="icon">▧</div><h3>Upholstery Cleaning</h3><p>Ask about refreshing sofas, chairs and upholstered furniture. Let the team know the material, number of items and their condition.</p><a href="#quote">Request a Quote ↗</a></article>
+</div></div>
+</section>
+
+<section id="about"><div class="wrap about-grid">
+<div class="about-art"><div class="about-card"><strong>Spotlight Cleaning Services</strong><p>Helping homes and workplaces across Lagos feel cleaner, fresher and ready for the day.</p></div></div>
+<div class="about"><div class="kicker">About Us</div><h2>A Brighter, Cleaner Space Starts Here</h2><p>Spotlight Cleaning Services provides a range of cleaning options for residential and commercial spaces in Lagos. Whether you need routine cleaning, a deep clean, office cleaning or support after construction, tell us what needs attention and request a quote.</p>
+<ul class="checks"><li>Cleaning options for homes and workplaces</li><li>Service requests tailored to your property</li><li>Clear communication about your cleaning needs</li><li>Convenient quote requests through WhatsApp</li></ul><a class="btn" href="#quote">Ask for a Free Quote ↗</a></div>
+</div></section>
+
+<section class="pale"><div class="wrap">
+<div class="heading"><div class="kicker">How It Works</div><h2>Three Simple Steps to a Cleaner Space</h2><p>Send your request with a few details about your cleaning needs. The team can follow up to discuss the work, availability and pricing.</p></div>
+<div class="steps">
+<div class="step"><strong>STEP 01</strong><h3>Tell Us What You Need</h3><p>Choose a service and share your location, property type, preferred timing and important cleaning details.</p></div>
+<div class="step"><strong>STEP 02</strong><h3>Discuss Your Quote</h3><p>Your WhatsApp request gives the team a starting point to clarify the work required and discuss the price.</p></div>
+<div class="step"><strong>STEP 03</strong><h3>Arrange Your Cleaning</h3><p>Once the service details, price and timing are agreed, confirm your cleaning appointment directly with the team.</p></div>
+</div></div></section>
+
+<div class="cta"><div class="wrap cta-inner"><div><h2>Ready for a Cleaner, Fresher Space?</h2><p>Send Spotlight Cleaning Services your request for a quote.</p></div><a class="btn" style="background:white;color:#0b3023;border-color:white" href="#quote">Get a Free Quote ↗</a></div></div>
+
+<section class="pale" id="quote"><div class="wrap quote-grid">
+<div class="quote-copy"><div class="kicker">Contact and Quote</div><h2>Let's Plan Your Clean</h2><p>Complete the form with your contact details and service needs. WhatsApp will open with your request prepared as a message. Review it and press Send to submit it to Spotlight Cleaning Services.</p>
+<div class="contact-list"><div><strong>☎ Phone / WhatsApp</strong><a href="tel:+2348098179146">0809 817 9146</a></div><div><strong>⌖ Business Address</strong>Jakande, 1st Gate, 11 Muibi A. Street, Eti-Osa, Lekki 100423, Lagos.</div><div><strong>◷ Listed Business Hours</strong>Open 24 hours according to the business listing. Confirm appointment availability directly.</div></div></div>
+<form class="form-box" id="quoteForm">
+<div class="form-grid">
+<div class="field"><label for="name">Full Name *</label><input id="name" name="name" required placeholder="Your full name"></div>
+<div class="field"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" required placeholder="Your phone number"></div>
+<div class="field full"><label for="email">Email (Optional)</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
+<div class="field full"><label for="service">Service Needed *</label><select id="service" name="service" required><option value="">Choose a service</option><option>Deep Cleaning</option><option>Office and Workplace Cleaning</option><option>Standard Cleaning</option><option>Fumigation Services</option><option>Post-Construction Cleaning</option><option>Spring Cleaning</option><option>Upholstery Cleaning</option><option>More Than One Service</option></select></div>
+<div class="field"><label for="property">Property Type</label><select id="property" name="property"><option>Not specified</option><option>Apartment</option><option>House</option><option>Office</option><option>Shop or Commercial Space</option><option>Newly Constructed Property</option><option>Other</option></select></div>
+<div class="field"><label for="frequency">Frequency</label><select id="frequency" name="frequency"><option>One-time</option><option>Weekly</option><option>Every Two Weeks</option><option>Monthly</option><option>Not Sure Yet</option></select></div>
+<div class="field full"><label for="location">Your Area / Location *</label><input id="location" name="location" required placeholder="e.g. Lekki, Lagos"></div>
+<div class="field full"><label for="date">Preferred Date (Optional)</label><input id="date" name="date" type="date"></div>
+<div class="field full"><label for="details">More Details</label><textarea id="details" name="details" placeholder="Property size, number of rooms, areas to clean or special requirements."></textarea></div>
+</div>
+<p class="note">Your request is sent only after you review the prepared message and press Send in WhatsApp.</p>
+<button class="btn" type="submit">Send Quote Request on WhatsApp ↗</button>
+</form>
+</div></section>
+
+<section id="faq"><div class="wrap">
+<div class="heading"><div class="kicker">Frequently Asked Questions</div><h2>Questions Before You Book?</h2><p>Useful details before requesting a cleaning quote.</p></div>
+<div class="faq">
+<details><summary>How much does cleaning cost?</summary><p>The price depends on the service, property size and condition, and the work required. Request a quote to discuss pricing.</p></details>
+<details><summary>Which areas do you serve?</summary><p>The business is listed in Lagos. Include your area in your request so the team can confirm service availability.</p></details>
+<details><summary>Can I request home or office cleaning?</summary><p>Listed services include standard cleaning, deep cleaning, office cleaning and several other cleaning options.</p></details>
+<details><summary>How do I submit a quote request?</summary><p>Complete the form and click the WhatsApp button. Review the prepared message and press Send.</p></details>
+<details><summary>Are you open 24 hours?</summary><p>The business listing shows open 24 hours. Confirm your preferred appointment time directly with the business.</p></details>
+<details><summary>Do you offer post-construction cleaning?</summary><p>Post-construction cleaning is one of the listed services. Include your property location and cleaning requirements in your request.</p></details>
+</div></div></section>
+</main>
+
+<div class="quick"><a class="call" href="tel:+2348098179146">☎ Call Us</a><a class="wa" href="https://wa.me/2348098179146" target="_blank" rel="noopener noreferrer">◉ WhatsApp</a></div>
+
+<footer><div class="wrap">
+<div class="footer-grid">
+<div><a class="brand" href="#home"><span class="logo">✦</span><span style="color:white">Spotlight Cleaning Services</span></a><p>Professional cleaning options for homes and workplaces across Lagos. Contact us to discuss your cleaning needs.</p></div>
+<div><h4>Explore</h4><div class="footer-links"><a href="#home">Home</a><a href="#services">Our Services</a><a href="#about">About Us</a><a href="#quote">Get a Quote</a><a href="#faq">FAQs</a></div></div>
+<div><h4>Contact</h4><div class="footer-links"><a href="tel:+2348098179146">0809 817 9146</a><a href="https://wa.me/2348098179146" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a><span>Lekki, Eti-Osa, Lagos</span></div></div>
+</div>
+<div class="copyright"><span>© <span id="year"></span> Spotlight Cleaning Services. All rights reserved.</span><span>Clean spaces · Healthier lives</span></div>
+</div></footer>
+
+<script>
+const menuButton=document.getElementById("menuButton");
+const navLinks=document.getElementById("navLinks");
+menuButton.addEventListener("click",function(){
+  const opened=navLinks.classList.toggle("open");
+  menuButton.textContent=opened?"×":"☰";
+  menuButton.setAttribute("aria-expanded",String(opened));
+});
+navLinks.querySelectorAll("a").forEach(function(a){
+  a.addEventListener("click",function(){
+    navLinks.classList.remove("open");
+    menuButton.textContent="☰";
+    menuButton.setAttribute("aria-expanded","false");
+  });
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+
+document.getElementById("quoteForm").addEventListener("submit",function(event){
+  event.preventDefault();
+  const f=new FormData(event.currentTarget);
+  const message=[
+    "Hello Spotlight Cleaning Services, I would like to request a cleaning quote.",
+    "",
+    "Full Name: "+f.get("name"),
+    "Phone Number: "+f.get("phone"),
+    "Email: "+(f.get("email")||"Not provided"),
+    "Service Needed: "+f.get("service"),
+    "Property Type: "+f.get("property"),
+    "Frequency: "+f.get("frequency"),
+    "Location: "+f.get("location"),
+    "Preferred Date: "+(f.get("date")||"Not specified"),
+    "Details: "+(f.get("details")||"Not provided")
+  ].join("\n");
+  const url="https://wa.me/2348098179146?text="+encodeURIComponent(message);
+  const newWindow=window.open(url,"_blank");
+  if(!newWindow){window.location.href=url;}
+});
+</script>
+</body>
+</html>
