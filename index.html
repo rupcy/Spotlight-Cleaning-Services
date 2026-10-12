@@ -639,55 +639,35 @@
       align-items: center;
     }
 
+    /* UPDATED: ABOUT IMAGE */
+
     .about-visual {
       position: relative;
-      min-height: 420px;
+      min-height: 0;
       overflow: hidden;
       border-radius: 30px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(46,184,114,.32), transparent 30%),
-        linear-gradient(145deg, #244b35, #0a1b11);
+      background: #10251d;
       box-shadow: var(--shadow);
-      padding: 35px;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
     }
 
-    .about-visual::before,
-    .about-visual::after {
-      content: "";
-      position: absolute;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 50%;
-      width: 340px;
-      height: 340px;
-      right: -80px;
-      top: -90px;
-    }
-
-    .about-visual::after {
-      width: 230px;
-      height: 230px;
-      right: -30px;
-      top: -35px;
-    }
-
-    .about-big-number {
-      position: absolute;
-      top: 35px;
-      left: 35px;
-      color: rgba(255,255,255,.11);
-      font-size: clamp(5rem, 12vw, 9rem);
-      font-weight: 950;
-      line-height: 1;
-      letter-spacing: -.1em;
+    .about-photo {
+      display: block;
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 30px;
     }
 
     .about-visual-content {
       position: relative;
       z-index: 1;
+      padding: 24px 26px 29px;
       color: #fff;
+      background: var(--green-dark);
     }
 
     .about-visual-content span {
@@ -704,7 +684,7 @@
       font-weight: 900;
       line-height: 1.08;
       letter-spacing: -.055em;
-      margin-top: 14px;
+      margin-top: 10px;
     }
 
     .about-copy p {
@@ -787,12 +767,26 @@
     .cta-panel {
       position: relative;
       overflow: hidden;
-      padding: clamp(35px, 6vw, 70px);
+      padding: clamp(25px, 4vw, 45px);
       border-radius: 30px;
       background:
         radial-gradient(circle at 95% 5%, rgba(46,184,114,.2), transparent 30%),
         var(--green-dark);
       color: #fff;
+    }
+
+    /* UPDATED: CTA IMAGE ABOVE ITS TEXT */
+
+    .cta-photo {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: clamp(230px, 40vw, 440px);
+      margin-bottom: 32px;
+      border-radius: 22px;
+      object-fit: cover;
+      object-position: center;
     }
 
     .cta-panel::after {
@@ -805,6 +799,7 @@
       right: -80px;
       bottom: -130px;
       box-shadow: 0 0 0 30px rgba(255,255,255,.025), 0 0 0 60px rgba(255,255,255,.025);
+      pointer-events: none;
     }
 
     .cta-content {
@@ -1402,18 +1397,25 @@
         gap: 34px;
       }
 
+      /* UPDATED: RESPONSIVE ABOUT PHOTO */
+
       .about-visual {
-        min-height: 330px;
-        padding: 26px;
+        min-height: 0;
+        padding: 0;
       }
 
-      .about-big-number {
-        top: 26px;
-        left: 26px;
+      .about-photo {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .about-visual-content {
+        padding: 22px;
       }
 
       .about-visual-content h3 {
-        font-size: 2.45rem;
+        font-size: 2.25rem;
       }
 
       .check-list li {
@@ -1425,8 +1427,17 @@
       }
 
       .cta-panel {
-        padding: 32px 25px;
+        padding: 22px;
         border-radius: 24px;
+      }
+
+      /* UPDATED: RESPONSIVE CTA PHOTO */
+
+      .cta-photo {
+        width: 100%;
+        height: 260px;
+        margin-bottom: 25px;
+        border-radius: 17px;
       }
 
       .cta-content h2 {
@@ -1503,6 +1514,14 @@
       .hero-topline {
         font-size: .57rem;
       }
+
+      .about-photo {
+        height: 240px;
+      }
+
+      .cta-photo {
+        height: 220px;
+      }
     }
   </style>
 </head>
@@ -1536,8 +1555,7 @@
   </header>
 
   <main>
-    <!-- SCROLL VIDEO HERO
-         Keep spotlight-homepage-video.mp4 in the same folder as index.html. -->
+    <!-- SCROLL VIDEO HERO -->
     <section class="video-stage" id="home" aria-label="Spotlight Cleaning Services introduction">
       <div class="video-sticky">
         <div class="video-fallback"></div>
@@ -1563,7 +1581,6 @@
         </div>
 
         <div class="hero-copy-wrap">
-          <!-- SCENE 1 -->
           <div class="hero-copy hero-scene-main" id="sceneMain">
             <div class="hero-kicker">Professional cleaning, elevated</div>
 
@@ -1589,7 +1606,6 @@
             </div>
           </div>
 
-          <!-- SCENE 2 -->
           <div class="hero-scene" id="sceneTwo" aria-hidden="true">
             <div class="scene-inner">
               <span class="scene-number">01 / A FRESH START</span>
@@ -1602,7 +1618,6 @@
             </div>
           </div>
 
-          <!-- SCENE 3 -->
           <div class="hero-scene" id="sceneThree" aria-hidden="true">
             <div class="scene-inner">
               <span class="scene-number">02 / YOUR SPACE, OUR CARE</span>
@@ -1731,8 +1746,16 @@
     <!-- ABOUT -->
     <section class="section about-section" id="about">
       <div class="container about-grid">
+
+        <!-- NEW ABOUT IMAGE: about-cleaning.jpg -->
         <div class="about-visual reveal">
-          <span class="about-big-number">S.</span>
+          <img
+            class="about-photo"
+            src="about-cleaning.jpg"
+            alt="Spotlight Cleaning Services cleaning a fresh, clean space"
+            loading="lazy"
+            onerror="this.onerror=null;this.alt='About cleaning image could not be loaded. Check that about-cleaning.jpg is in the same folder as index.html.';this.style.minHeight='220px';this.style.background='#dcebe0';">
+
           <div class="about-visual-content">
             <span>Spotlight Cleaning Services</span>
             <h3>We Bring the Fresh Feeling Back.</h3>
@@ -1812,6 +1835,16 @@
     <section class="cta-section">
       <div class="container">
         <div class="cta-panel reveal">
+
+          <!-- NEW CTA IMAGE: fresh-start.jpg -->
+          <img
+            class="cta-photo"
+            src="fresh-start.jpg"
+            alt="A fresh, clean space ready for a new start"
+            loading="lazy"
+            onerror="this.onerror=null;this.alt='Fresh start image could not be loaded. Check that fresh-start.jpg is in the same folder as index.html.';this.style.minHeight='220px';this.style.background='#dcebe0';">
+
+          <!-- TEXT REMAINS UNDER THE IMAGE -->
           <div class="cta-content">
             <span class="eyebrow">Your cleaner space starts here</span>
             <h2>Ready to Give Your Space a Fresh Start?</h2>
@@ -2129,7 +2162,6 @@
         videoStage.classList.remove("video-error");
       });
 
-      // Request metadata and frames where the browser allows it.
       video.load();
 
       function clamp(value, min, max) {
@@ -2158,11 +2190,9 @@
           videoStage.offsetHeight - window.innerHeight
         );
 
-        // Progress from 0 to 1 while the sticky video section scrolls.
         stageProgress = clamp(-rect.top / scrollableDistance, 0, 1);
 
-        // Scroll scrubbing: video time is tied to the stage's scroll progress.
-        // Use a small tolerance to avoid unnecessary seeking.
+        // Scroll scrubbing: video time follows scroll progress.
         if (videoReady && Number.isFinite(video.duration)) {
           const targetTime = clamp(
             stageProgress * Math.max(0, video.duration - 0.04),
@@ -2180,11 +2210,9 @@
           }
         }
 
-        // Subtle camera-like scale movement with the scroll.
         video.style.transform =
           `scale(${(1.015 + stageProgress * 0.045).toFixed(3)})`;
 
-        // Scene 1 exits as the next scenes enter.
         const mainFadeOut = smoothStep(0.18, 0.36, stageProgress);
         const mainFadeIn = 1 - smoothStep(0.01, 0.09, stageProgress);
         const mainOpacity = mainFadeIn * (1 - mainFadeOut);
@@ -2196,7 +2224,6 @@
           1 + stageProgress * 0.025
         );
 
-        // Scene 2 occupies the middle part of the scroll.
         const twoIn = smoothStep(0.24, 0.39, stageProgress);
         const twoOut = 1 - smoothStep(0.53, 0.68, stageProgress);
         const twoOpacity = twoIn * twoOut;
@@ -2208,7 +2235,6 @@
           0.98 + twoOpacity * 0.02
         );
 
-        // Scene 3 arrives toward the end of the cinematic sequence.
         const threeIn = smoothStep(0.59, 0.75, stageProgress);
         const threeOpacity = threeIn;
 
@@ -2238,7 +2264,6 @@
       window.addEventListener("resize", requestAnimationUpdate);
       window.addEventListener("orientationchange", requestAnimationUpdate);
 
-      // Run once immediately and again when metadata arrives.
       updateScrollAnimation();
 
       // Reveal lower sections as visitors scroll to them.
@@ -2262,7 +2287,6 @@
       }
 
       // Quote form: prepare the visitor's enquiry for WhatsApp.
-      // The visitor must press Send in WhatsApp to submit it.
       const quoteForm = document.getElementById("quoteForm");
 
       quoteForm.addEventListener("submit", (event) => {
